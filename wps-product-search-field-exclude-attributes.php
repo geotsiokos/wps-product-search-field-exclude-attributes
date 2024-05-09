@@ -16,8 +16,8 @@ if ( !defined( 'ABSPATH' ) ) {
 class WPS_Product_Search_Field_Exclude_Attributes {
 
 	public static function init() {
-		add_action( 'wp_ajax_product_search', array( __CLASS__, 'wp_ajax_product_search' ), 9 );
-		add_action( 'wp_ajax_nopriv_product_search', array( __CLASS__, 'wp_ajax_product_search' ), 9 );
+		//add_action( 'wp_ajax_product_search', array( __CLASS__, 'wp_ajax_product_search' ), 9 );
+		//add_action( 'wp_ajax_nopriv_product_search', array( __CLASS__, 'wp_ajax_product_search' ), 9 );
 		add_action('woocommerce_product_search_service_post_ids_for_request', array( __CLASS__, 'woocommerce_product_search_service_post_ids_for_request' ), 10, 2 );
 	}
 
@@ -39,6 +39,5 @@ class WPS_Product_Search_Field_Exclude_Attributes {
 				}
 			}
 		}
-		error_log( print_r( $products, true ) );
 	}
 } WPS_Product_Search_Field_Exclude_Attributes::init();
