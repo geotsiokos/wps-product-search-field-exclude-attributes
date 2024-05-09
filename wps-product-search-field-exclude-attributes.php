@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: WPS Product Search Field Exclude Attributes
- * Plugin URI: @todo link to repo
- * Description: Exclude product attributes when using the Product Search Field by <a href="https://woo.com/products/woocommerce-product-search/">WooCommerce Product Search</a> 
+ * Plugin URI: https://github.com/geotsiokos/wps-product-search-field-exclude-attributes
+ * Description: Exclude products from search by attribute(s) when using the Product Search Field by <a href="https://woo.com/products/woocommerce-product-search/">WooCommerce Product Search</a> 
  * Version: 1.0.0
  * Author: gtsiokos
  * Author URI: http://www.netpad.gr
