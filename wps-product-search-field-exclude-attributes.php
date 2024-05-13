@@ -20,14 +20,15 @@ class WPS_Product_Search_Field_Exclude_Attributes {
 	}
 
 	public static function woocommerce_product_search_service_post_ids_for_request( &$products, $context ) {
-		$excluded_attributes = array( 'pa_brand' );
+		$excluded_attributes = array( 'brand' );
 		foreach ( $products as $key => $product_id ) {
 			$product = wc_get_product( $product_id );
 			if ( $product ) {
 				$attributes = $product->get_attributes();
 				$attribute_terms = array_keys( $attributes );
-				foreach( $attribute_terms as $term ) {
-					if ( in_array( $term, $excluded_attributes ) ) {
+				foreach( $excluded_attributes as $term ) {
+					$pa_term = 'pa_' . $term;
+					if ( in_array( $pa_term, $attribute_terms ) ) {
 						unset( $products[$key] );
 					}
 				}
