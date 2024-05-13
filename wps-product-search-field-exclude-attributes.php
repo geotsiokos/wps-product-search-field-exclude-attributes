@@ -20,7 +20,7 @@ class WPS_Product_Search_Field_Exclude_Attributes {
 	}
 
 	public static function woocommerce_product_search_service_post_ids_for_request( &$products, $context ) {
-		$excluded_attributes = array( 'brand' );
+		$excluded_attributes = array( 'brand', 'size' );
 		foreach ( $products as $key => $product_id ) {
 			$product = wc_get_product( $product_id );
 			if ( $product ) {
